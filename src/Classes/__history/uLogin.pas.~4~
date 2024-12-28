@@ -1,0 +1,27 @@
+unit uLogin;
+
+interface
+
+uses
+  uILogin;
+
+type
+
+  TLogin = class(TInterfacedObject, ILogin)
+  public
+    function ValidarLogin(Usuario, Senha: string): Boolean;
+    constructor create;
+    destructor destroy; override;
+
+  end;
+
+implementation
+
+{ TLogin }
+
+function TLogin.ValidarLogin(Usuario, Senha: string): Boolean;
+begin
+  Result := (Usuario = 'admin') and (Senha = 'senha123');
+end;
+
+end.

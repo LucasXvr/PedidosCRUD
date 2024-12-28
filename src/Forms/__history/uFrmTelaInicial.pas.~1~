@@ -1,0 +1,24 @@
+unit uFrmTelaInicial;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TFrmTelaInicial = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmTelaInicial: TFrmTelaInicial;
+
+implementation
+
+{$R *.dfm}
+
+end.

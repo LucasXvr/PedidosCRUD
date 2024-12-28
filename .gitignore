@@ -1,0 +1,29 @@
+# Ignorar arquivos de compilação do Delphi
+*.dcu
+*.dcp
+*.dproj
+*.~*         # Arquivos temporários de compilação
+*.exe        # Executáveis
+*.obj        # Arquivos de objeto
+
+# Pastas de build e binários
+/bin/
+/obj/
+/debug/
+/release/
+
+# Arquivos de configuração específicos do IDE
+*.local
+.idea/
+.vscode/
+
+# Ignorar pastas de pacotes do Delphi
+*.bak        # Arquivos de backup
+*.identcache # Cache da IDE
+
+# Arquivos de log
+*.log
+
+# Ignorar arquivos temporários do sistema operacional
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,36 @@
+unit uFrmPedidos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TFrmPedidos = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure ShowAndCloseLogin(LoginForm: TForm);
+  end;
+
+var
+  FrmPedidos: TFrmPedidos;
+
+implementation
+
+{$R *.dfm}
+
+{ TFrmPedidos }
+
+procedure TFrmPedidos.ShowAndCloseLogin(LoginForm: TForm);
+begin
+  // Mostra o formulário de pedidos
+  Self.Show;
+
+  // Fecha o formulário de login
+  LoginForm.Close;
+end;
+
+end.

@@ -1,0 +1,16 @@
+program PedidosCRUD;
+
+uses
+  Vcl.Forms,
+  uFrmLogin in '..\src\Forms\uFrmLogin.pas' {FrmLogin},
+  uDmConexao in '..\src\DataModules\uDmConexao.pas' {DmConexao: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDmConexao, DmConexao);
+  Application.CreateForm(TFrmLogin, FrmLogin);
+  Application.Run;
+end.

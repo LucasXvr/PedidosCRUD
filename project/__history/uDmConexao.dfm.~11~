@@ -1,0 +1,15 @@
+object DmConexao: TDmConexao
+  OnCreate = DataModuleCreate
+  Height = 290
+  Width = 408
+  object Conn: TFDConnection
+    AfterConnect = ConnAfterConnect
+    BeforeConnect = ConnBeforeConnect
+    Left = 72
+    Top = 32
+  end
+  object FDPhysSQLiteDriverLink: TFDPhysSQLiteDriverLink
+    Left = 176
+    Top = 32
+  end
+end

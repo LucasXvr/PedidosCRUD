@@ -1,0 +1,14 @@
+program PedidosCRUD;
+
+uses
+  Vcl.Forms,
+  uFrmLogin in '..\src\Forms\uFrmLogin.pas' {FrmLogin};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmLogin, FrmLogin);
+  Application.Run;
+end.

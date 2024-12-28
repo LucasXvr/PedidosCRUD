@@ -1,0 +1,12 @@
+object DmConexao: TDmConexao
+  Height = 316
+  Width = 421
+  object Conn: TFDConnection
+    Left = 104
+    Top = 56
+  end
+  object FDPhysSQLiteDriverLink: TFDPhysSQLiteDriverLink
+    Left = 224
+    Top = 64
+  end
+end

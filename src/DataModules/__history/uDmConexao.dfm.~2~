@@ -1,0 +1,4 @@
+object DmConexao: TDmConexao
+  Height = 455
+  Width = 615
+end
