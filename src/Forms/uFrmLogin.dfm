@@ -19,8 +19,6 @@ object FrmLogin: TFrmLogin
     Height = 448
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 624
-    ExplicitHeight = 441
     object Label1: TLabel
       Left = 200
       Top = 99

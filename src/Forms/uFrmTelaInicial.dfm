@@ -19,10 +19,6 @@ object FrmTelaInicial: TFrmTelaInicial
     Height = 571
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 248
-    ExplicitTop = 184
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object pnlMenu: TPanel
       Left = 1
       Top = 1
@@ -30,9 +26,8 @@ object FrmTelaInicial: TFrmTelaInicial
       Height = 88
       Align = alTop
       TabOrder = 0
-      ExplicitWidth = 664
       object btnPedidos: TButton
-        Left = 1
+        Left = 97
         Top = 1
         Width = 96
         Height = 86
@@ -40,10 +35,10 @@ object FrmTelaInicial: TFrmTelaInicial
         Caption = 'Pedidos'
         TabOrder = 0
         OnClick = btnPedidosClick
-        ExplicitLeft = -5
+        ExplicitLeft = 1
       end
       object btnPessoa: TButton
-        Left = 97
+        Left = 1
         Top = 1
         Width = 96
         Height = 86

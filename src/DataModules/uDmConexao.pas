@@ -53,17 +53,20 @@ begin
     Conn.ExecSQL(
       'CREATE TABLE IF NOT EXISTS Pessoa (' +
       '  ID INTEGER PRIMARY KEY AUTOINCREMENT, ' +
-      '  Nome TEXT NOT NULL, ' +
-      '  CpfCnpj TEXT NOT NULL, ' +
-      '  Telefone TEXT, ' +
-      '  Endereco TEXT ' +
+      '  Nome VARCHAR(60) NOT NULL, ' +
+      '  CpfCnpj VARCHAR(30) NOT NULL, ' +
+      '  Telefone VARCHAR(30), ' +
+      '  Endereco VARCHAR(125), ' +
+      '  Cep VARCHAR(20), ' +
+      '  Cidade VARCHAR(35), ' +
+      '  Estado VARCHAR(2) ' +
       ');'
     );
     Conn.ExecSQL(
       'CREATE TABLE IF NOT EXISTS Produto (' +
       '  ID INTEGER PRIMARY KEY AUTOINCREMENT, ' +
-      '  Descricao TEXT NOT NULL, ' +
-      '  UnidadeMedida TEXT NOT NULL ' +
+      '  Descricao VARCHAR(255) NOT NULL, ' +
+      '  UnidadeMedida VARCHAR(50) NOT NULL ' +
       ');'
     );
     Conn.ExecSQL(
@@ -81,14 +84,13 @@ begin
       '  PedidoID INTEGER NOT NULL, ' +
       '  ProdutoID INTEGER NOT NULL, ' +
       '  Quantidade REAL NOT NULL, ' +
-      '  UnidadeMedida TEXT NOT NULL, ' +
+      '  UnidadeMedida VARCHAR(50) NOT NULL, ' +
       '  Valor REAL NOT NULL, ' +
       '  Total REAL NOT NULL, ' +
       '  FOREIGN KEY (PedidoID) REFERENCES Pedido(ID), ' +
       '  FOREIGN KEY (ProdutoID) REFERENCES Produto(ID) ' +
       ');'
     );
-
   except on E: Exception do
     raise Exception.Create('Erro ao criar tabelas: ' + E.Message);
   end;

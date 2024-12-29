@@ -32,23 +32,21 @@ implementation
 
 procedure TFrmLogin.btnLoginClick(Sender: TObject);
 var
-  Login: ILogin;  // Variável de interface
+  Login: ILogin;
 begin
-  // Criar a instância via interface
-  Login := TLogin.Login;  // Usando o método de classe que retorna a interface
-  // Validar login com os dados informados
+  Login := TLogin.Login;
+
   if Login.ValidarLogin(edtNome.Text, edtSenha.Text) then
   begin
     ShowMessage('Login bem-sucedido!');
 
-    // Criar e mostrar o formulário de pedidos
     FrmTelaInicial := TFrmTelaInicial.Create(nil);
     try
-      Self.Hide; // Esconde o formulário de login
-      FrmTelaInicial.ShowModal; // Abre o FrmPedidos como modal
+      Self.Hide;
+      FrmTelaInicial.ShowModal;
     finally
-      Self.Show; // Reexibe o formulário de login ao fechar o FrmPedidos
-      FreeAndNil(FrmTelaInicial); // Libera o formulário de pedidos da memória
+      Self.Show;
+      FreeAndNil(FrmTelaInicial);
     end;
   end
   else

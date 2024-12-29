@@ -1,0 +1,72 @@
+unit uFrmPessoa;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, uFrmCadPessoa, uPessoa, uDmConexao;
+
+type
+  TFrmPessoa = class(TForm)
+    pnlPrincipal: TPanel;
+    pnlMenu: TPanel;
+    DBGrid: TDBGrid;
+    btnNovo: TButton;
+    DsPessoa: TDataSource;
+    btnEditar: TButton;
+    btnExcluir: TButton;
+    pnlBuscar: TPanel;
+    procedure btnNovoClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure AtualizarGrid;
+  end;
+
+var
+  FrmPessoa: TFrmPessoa;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmPessoa.AtualizarGrid;
+var
+  Pessoas: TDataSet;
+begin
+  Pessoas := TPessoa.BuscarTodos(DmConexao.Conn);
+
+  DsPessoa.DataSet := Pessoas;
+  DsPessoa.DataSet.Refresh;
+end;
+
+procedure TFrmPessoa.btnEditarClick(Sender: TObject);
+begin
+  FrmCadPessoa := TFrmCadPessoa.Create(nil);
+  try
+    FrmCadPessoa.ShowModal;
+  finally
+    FrmCadPessoa.Free;
+  end;
+end;
+
+procedure TFrmPessoa.btnNovoClick(Sender: TObject);
+begin
+  FrmCadPessoa := TFrmCadPessoa.Create(nil);
+  try
+    FrmCadPessoa.ShowModal;
+  finally
+    FrmCadPessoa.Free;
+  end;
+end;
+
+procedure TFrmPessoa.FormShow(Sender: TObject);
+begin
+  AtualizarGrid;
+end;
+
+end.

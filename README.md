@@ -4,11 +4,8 @@ Projeto desenvolvido para avaliação técnica de desenvolvedor Delphi. O sistem
 
 ## Funcionalidades
 
-- **Cadastro de pedidos**: Registra pedidos de clientes com dados como data, cliente, e status.
-- **Cadastro de produtos**: Adiciona e gerencia produtos disponíveis para os pedidos.
 - **Cadastro de pessoas**: Registra clientes e funcionários do sistema.
-- **Consulta de pedidos**: Pesquisa e exibe pedidos registrados no sistema.
-- **CRUD completo**: Permite a criação, leitura, atualização e exclusão dos pedidos, produtos e pessoas.
+- **CRUD**: Permite a criação, leitura, atualização e exclusão de pessoas.
 
 ## Tecnologias Utilizadas
 
@@ -16,6 +13,8 @@ Projeto desenvolvido para avaliação técnica de desenvolvedor Delphi. O sistem
 - **Banco de dados**: Utilização de SQL para consultas e manipulação dos dados.
 - **Git**: Para versionamento do código.
 - **API REST**: (Se aplicável) Para integração com outros sistemas ou funcionalidades.
+
+- **Funcionalidades extras** consumo da API viaCep para busca de endereço, cidade e estado da pessoa.
 
 ## Como rodar o projeto
 

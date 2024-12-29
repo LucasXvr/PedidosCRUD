@@ -8,7 +8,10 @@ uses
   uLogin in '..\src\Classes\uLogin.pas',
   uFrmPedidos in '..\src\Forms\uFrmPedidos.pas' {FrmPedidos},
   uFrmTelaInicial in '..\src\Forms\uFrmTelaInicial.pas' {FrmTelaInicial},
-  uFrmPessoa in '..\src\Forms\uFrmPessoa.pas' {FrmPessoa};
+  uFrmPessoa in '..\src\Forms\uFrmPessoa.pas' {FrmPessoa},
+  uPessoa in '..\src\Classes\uPessoa.pas',
+  uFrmCadPessoa in '..\src\Forms\uFrmCadPessoa.pas' {FrmCadPessoa},
+  uCepService in '..\src\Classes\uCepService.pas';
 
 {$R *.res}
 
@@ -19,5 +22,6 @@ begin
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TFrmTelaInicial, FrmTelaInicial);
   Application.CreateForm(TFrmPessoa, FrmPessoa);
+  Application.CreateForm(TFrmCadPessoa, FrmCadPessoa);
   Application.Run;
 end.
