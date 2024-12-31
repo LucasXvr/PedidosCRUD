@@ -10,9 +10,8 @@ Projeto desenvolvido para avaliação técnica de desenvolvedor Delphi. O sistem
 ## Tecnologias Utilizadas
 
 - **Delphi**: Ambiente de desenvolvimento.
-- **Banco de dados**: Utilização de SQL para consultas e manipulação dos dados.
+- **Banco de dados**: Utilização de SQLite para consultas e manipulação dos dados.
 - **Git**: Para versionamento do código.
-- **API REST**: (Se aplicável) Para integração com outros sistemas ou funcionalidades.
 
 - **Funcionalidades extras** consumo da API viaCep para busca de endereço, cidade e estado da pessoa.
 
